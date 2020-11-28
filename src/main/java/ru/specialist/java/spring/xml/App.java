@@ -23,6 +23,8 @@ public class App {
 
         System.out.println("Memory: " + computer.getMemoryList()
                 .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
+        System.out.println("Storage: " + computer.getStorageList()
+                .stream().map(Device::getVendor));
 
     }
 }
