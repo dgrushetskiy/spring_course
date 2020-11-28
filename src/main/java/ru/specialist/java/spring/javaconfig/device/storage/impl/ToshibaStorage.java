@@ -1,6 +1,6 @@
 package ru.specialist.java.spring.javaconfig.device.storage.impl;
 
-import ru.specialist.java.spring.annotation.device.storage.Storage;
+import ru.specialist.java.spring.javaconfig.device.storage.Storage;
 
 public class ToshibaStorage implements Storage {
     @Override
