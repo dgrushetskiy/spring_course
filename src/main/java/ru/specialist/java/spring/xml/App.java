@@ -16,8 +16,11 @@ public class App {
         CPU cpu = (CPU)ctx.getBean("intelCPU");
         System.out.println(cpu.getVendor());
 
+
         Computer computer = ctx.getBean(Computer.class);
         System.out.println("CPU: " + computer.getCpu().getVendor());
+        System.out.println("Screen: " + computer.getScreen().getVendor());
+
         System.out.println("Memory: " + computer.getMemoryList()
                 .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
 

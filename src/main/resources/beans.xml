@@ -6,40 +6,16 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="ru.specialist.java.spring.xml.Computer" id="computer" autowire="constructor">
-        <!--        <property name="cpu">-->
-        <!--            <bean class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>-->
-        <!--        </property>-->
-
-        <!--        <property name="cpu" ref="factoryCPU" />-->
-
-        <!--        <property name="cpu">-->
-        <!--            <ref bean="amdCPU"/>-->
-        <!--        </property>-->
-
-        <!--        <property name="cpu" ref="amdCPU"/>-->
-
-        <!--        <constructor-arg name="cpu" ref="amdCPU" />-->
-
-        <!--        <constructor-arg name="cpu" ref="staticFactoryCPU" />-->
-
-        <!--        <property name="memoryList">-->
-        <!--            <list>-->
-        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory" />-->
-        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory" />-->
-        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.KingstonMemory" />-->
-        <!--            </list>-->
-        <!--        </property>-->
-
-
-        <!--        <constructor-arg name="cpu" ref="amdCPU" />-->
-        <!--        <constructor-arg name="memoryList">-->
-        <!--            <list>-->
-        <!--                <ref bean="sonyMemory1" />-->
-        <!--                <ref bean="kingstonMemory" />-->
-        <!--                <ref bean="sonyMemory2" />-->
-        <!--            </list>-->
-        <!--        </constructor-arg>-->
-
+        <property name="cpu" ref="amdCPU"/>
+        <property name="screen" >
+            <bean class="ru.specialist.java.spring.xml.device.screen.impl.ToshibaScreen"/>
+        </property>
+        <property name="storageList">
+            <list>
+                <bean class="ru.specialist.java.spring.xml.device.storage.impl.SonyStorage"/>
+                <bean class="ru.specialist.java.spring.xml.device.storage.impl.ToshibaStorage"/>
+            </list>
+        </property>
         <property name="memoryList">
             <list>
                 <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory"/>
@@ -47,23 +23,14 @@
                 <bean class="ru.specialist.java.spring.xml.device.memory.impl.KingstonMemory"/>
             </list>
         </property>
-
-        <property name="storageList">
-            <list>
-                <ref bean="sonyMemory1" />
-                <ref bean="kingstonMemory" />
-                <ref bean="sonyMemory2" />
-            </list>
-        </property>
-
-
     </bean>
 
     <import resource="memory.xml"/>
+    <import resource="storage.xml"/>
 
-    <bean id="cpu" class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>
     <bean id="amdCPU" class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>
     <bean id="intelCPU" class="ru.specialist.java.spring.xml.device.cpu.impl.IntelCPU"/>
+    <bean id="toshibaScreen" class="ru.specialist.java.spring.xml.device.screen.impl.ToshibaScreen"/>
 
     <!--    Static factory -->
     <bean id="staticFactoryCPU"

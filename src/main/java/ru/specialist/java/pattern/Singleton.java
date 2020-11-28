@@ -1,4 +1,4 @@
-package ru.specialist.java.spring.pattern;
+package ru.specialist.java.pattern;
 
 public class Singleton {
 
