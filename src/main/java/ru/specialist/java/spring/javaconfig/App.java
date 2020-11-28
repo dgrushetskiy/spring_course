@@ -2,8 +2,8 @@ package ru.specialist.java.spring.javaconfig;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.specialist.java.spring.pattern.Singleton;
+import ru.specialist.java.spring.javaconfig.device.Device;
+import ru.specialist.java.spring.javaconfig.device.cpu.CPU;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

@@ -3,6 +3,8 @@ package ru.specialist.java.spring.annotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import ru.specialist.java.spring.annotation.device.cpu.CPU;
+import ru.specialist.java.spring.annotation.device.memory.Memory;
 
 import java.util.List;
 

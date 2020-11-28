@@ -2,7 +2,12 @@ package ru.specialist.java.spring.javaconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import ru.specialist.java.spring.javaconfig.device.cpu.CPU;
+import ru.specialist.java.spring.javaconfig.device.cpu.impl.AmdCpu;
+import ru.specialist.java.spring.javaconfig.device.cpu.impl.IntelCPU;
+import ru.specialist.java.spring.javaconfig.device.memory.Memory;
+import ru.specialist.java.spring.javaconfig.device.memory.impl.KingstonMemory;
+import ru.specialist.java.spring.javaconfig.device.memory.impl.SonyMemory;
 
 import java.util.List;
 

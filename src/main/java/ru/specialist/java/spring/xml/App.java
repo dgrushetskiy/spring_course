@@ -1,8 +1,9 @@
 package ru.specialist.java.spring.xml;
 
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.specialist.java.spring.xml.device.Device;
+import ru.specialist.java.spring.xml.device.cpu.CPU;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

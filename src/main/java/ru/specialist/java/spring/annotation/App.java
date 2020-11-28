@@ -2,6 +2,7 @@ package ru.specialist.java.spring.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.specialist.java.spring.annotation.device.Device;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

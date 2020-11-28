@@ -6,41 +6,49 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="ru.specialist.java.spring.xml.Computer" id="computer" autowire="constructor">
-<!--        <property name="cpu">-->
-<!--            <bean class="ru.specialist.java.spring.xml.AmdCpu"/>-->
-<!--        </property>-->
+        <!--        <property name="cpu">-->
+        <!--            <bean class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>-->
+        <!--        </property>-->
 
-<!--        <property name="cpu" ref="factoryCPU" />-->
+        <!--        <property name="cpu" ref="factoryCPU" />-->
 
-<!--        <property name="cpu">-->
-<!--            <ref bean="amdCPU"/>-->
-<!--        </property>-->
+        <!--        <property name="cpu">-->
+        <!--            <ref bean="amdCPU"/>-->
+        <!--        </property>-->
 
-<!--        <property name="cpu" ref="amdCPU"/>-->
+        <!--        <property name="cpu" ref="amdCPU"/>-->
 
-<!--        <constructor-arg name="cpu" ref="amdCPU" />-->
+        <!--        <constructor-arg name="cpu" ref="amdCPU" />-->
 
-<!--        <constructor-arg name="cpu" ref="staticFactoryCPU" />-->
+        <!--        <constructor-arg name="cpu" ref="staticFactoryCPU" />-->
 
-<!--        <property name="memoryList">-->
-<!--            <list>-->
-<!--                <bean class="ru.specialist.java.spring.xml.SonyMemory" />-->
-<!--                <bean class="ru.specialist.java.spring.xml.SonyMemory" />-->
-<!--                <bean class="ru.specialist.java.spring.xml.KingstonMemory" />-->
-<!--            </list>-->
-<!--        </property>-->
+        <!--        <property name="memoryList">-->
+        <!--            <list>-->
+        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory" />-->
+        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory" />-->
+        <!--                <bean class="ru.specialist.java.spring.xml.device.memory.impl.KingstonMemory" />-->
+        <!--            </list>-->
+        <!--        </property>-->
 
 
-<!--        <constructor-arg name="cpu" ref="amdCPU" />-->
-<!--        <constructor-arg name="memoryList">-->
-<!--            <list>-->
-<!--                <ref bean="sonyMemory1" />-->
-<!--                <ref bean="kingstonMemory" />-->
-<!--                <ref bean="sonyMemory2" />-->
-<!--            </list>-->
-<!--        </constructor-arg>-->
+        <!--        <constructor-arg name="cpu" ref="amdCPU" />-->
+        <!--        <constructor-arg name="memoryList">-->
+        <!--            <list>-->
+        <!--                <ref bean="sonyMemory1" />-->
+        <!--                <ref bean="kingstonMemory" />-->
+        <!--                <ref bean="sonyMemory2" />-->
+        <!--            </list>-->
+        <!--        </constructor-arg>-->
 
         <property name="memoryList">
+            <list>
+                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory"/>
+                <bean class="ru.specialist.java.spring.xml.device.memory.impl.SonyMemory"/>
+                <bean class="ru.specialist.java.spring.xml.device.memory.impl.KingstonMemory"/>
+            </list>
+        </property>
+
+        <property name="storageList">
             <list>
                 <ref bean="sonyMemory1" />
                 <ref bean="kingstonMemory" />
@@ -53,19 +61,19 @@
 
     <import resource="memory.xml"/>
 
-    <bean id="cpu" class="ru.specialist.java.spring.xml.AmdCpu"/>
-    <bean id="amdCPU" class="ru.specialist.java.spring.xml.AmdCpu"/>
-    <bean id="intelCPU" class="ru.specialist.java.spring.xml.IntelCPU"/>
+    <bean id="cpu" class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>
+    <bean id="amdCPU" class="ru.specialist.java.spring.xml.device.cpu.impl.AmdCpu"/>
+    <bean id="intelCPU" class="ru.specialist.java.spring.xml.device.cpu.impl.IntelCPU"/>
 
-<!--    Static factory -->
+    <!--    Static factory -->
     <bean id="staticFactoryCPU"
-          class="ru.specialist.java.spring.xml.StaticCPUFactory"
+          class="ru.specialist.java.spring.xml.device.cpu.StaticCPUFactory"
           factory-method="createCPU">
         <constructor-arg name="name" value="AMD"/>
     </bean>
 
-<!--    Factory Method -->
-    <bean id="cpuFactory" class="ru.specialist.java.spring.xml.CPUFactory" />
+    <!--    Factory Method -->
+    <bean id="cpuFactory" class="ru.specialist.java.spring.xml.device.cpu.CPUFactory"/>
     <bean id="factoryCPU"
           factory-bean="cpuFactory"
           factory-method="createCPU">

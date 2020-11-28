@@ -1,5 +1,8 @@
 package ru.specialist.java.spring.javaconfig;
 
+import ru.specialist.java.spring.javaconfig.device.cpu.CPU;
+import ru.specialist.java.spring.javaconfig.device.memory.Memory;
+
 import java.util.List;
 
 public class Computer {

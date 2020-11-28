@@ -3,6 +3,9 @@ package ru.specialist.java.spring.annotation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import ru.specialist.java.spring.annotation.device.memory.impl.KingstonMemory;
+import ru.specialist.java.spring.annotation.device.memory.impl.SonyMemory;
+import ru.specialist.java.spring.annotation.device.memory.Memory;
 
 import java.util.List;
 
