@@ -1,0 +1,14 @@
+1) По аналогии с интерфейсами CPU и Memory сделать интерфейсы Screen и Storage, а также по два класса-реализаций:
+
+2) В класс Computer добавить:
+
+    private Screen screen;
+    private List<Storage> storageList;
+
+3) Дописать приложение App , добавив вывод новых элементов.
+
+4) Изменить конфигурации также для добавления созданных элементов в bean Computer.
+
+Сделать для всех трех пакетов прямо в них же (xml, javaconfig, annotation)
+
+Почта: vbodrov@specialist.ru
