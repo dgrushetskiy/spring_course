@@ -17,7 +17,7 @@ public class Computer {
     //    @Autowired
 //    @Qualifier("myCpu")
     private CPU cpu;
-
+    @Qualifier("myToshibaScreen")
     private Screen screen;
 
 
@@ -43,7 +43,7 @@ public class Computer {
     }
 
     @Autowired
-    public Computer(CPU cpu,  Screen screen, @Qualifier("listOfMemory") List<Memory> memoryList, @Qualifier("storages") List<Storage> storageList) {
+    public Computer(CPU cpu, @Qualifier("myToshibaScreen") Screen screen, @Qualifier("listOfMemory") List<Memory> memoryList, @Qualifier("storages") List<Storage> storageList) {
         this.cpu = cpu;
         this.screen = screen;
         this.memoryList = memoryList;
