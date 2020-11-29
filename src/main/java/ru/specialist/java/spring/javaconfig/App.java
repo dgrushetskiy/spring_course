@@ -23,7 +23,7 @@ public class App {
         System.out.println("Memory: " + myComputer.getMemoryList()
                 .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
         System.out.println("Storage: " + myComputer.getStorageList()
-                .stream().map(Device::getVendor));
+                .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
 
         Computer computer = (Computer)ctx.getBean("computer");
         System.out.println(myComputer.getCpu() == computer.getCpu());

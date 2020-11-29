@@ -17,7 +17,10 @@ public class App {
 
         Computer myComputer = (Computer)ctx.getBean(Computer.class);
         System.out.println("CPU: " + myComputer.getCpu().getVendor());
+        System.out.println("Screen: " + myComputer.getScreen().getVendor());
         System.out.println("Memory: " + myComputer.getMemoryList()
+                .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
+        System.out.println("Storage: " + myComputer.getStorageList()
                 .stream().map(Device::getVendor).collect(Collectors.joining(", ")));
 
     }
