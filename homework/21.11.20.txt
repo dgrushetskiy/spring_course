@@ -1,0 +1,6 @@
+1) Написать скрипты для таблиц user, role, user_role (файл Microblog.sql в директории resources, диаграмма в директории misc)
+   Написать Entity-классы для них же (User, Role, пакет ru.specialist.spring.entity)
+   Написать Repository-интерфейсы для этих сущностей (пакет ru.specialist.spring.dao.repository)
+   Написать к репозиториям тесты (наподобии PostSpringDataJPATest)
+
+2) Описать методы в PostRepository (см. комменты с пометкой TODO)
