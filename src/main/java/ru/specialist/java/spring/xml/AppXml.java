@@ -8,7 +8,7 @@ import ru.specialist.java.spring.xml.device.cpu.CPU;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class App {
+public class AppXml {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
